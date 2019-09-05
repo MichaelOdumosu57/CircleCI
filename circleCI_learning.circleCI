@@ -577,3 +577,150 @@ the postgresql database is in localhost as you see
 the user is root,the db is circle_test and no password thts how it works
 
 
+
+      
+Installing Dependencies
+       _______
+     _/       \_
+    / |       | \
+   /  |__   __|  \
+  |__/((o| |o))\__
+    \ | / _ \ | /
+     \_________/
+       
+since you in the environment use system commands to install your dependencies
+
+
+    steps:
+      - checkout
+      - run:
+          name: Install Python deps in a venv
+          command: |
+            python3 -m venv venv
+            . venv/bin/activate
+            pip install -r requirements/dev.txt
+
+a env var in a run stanza overrides the env var in the docker stanza
+            
+- run:
+          name: verifying config
+          command: echo ${FLASK_CONFIG}
+          environment:
+            FLASK_CONFIG: staging
+            
+
+            
+      
+Caching Dependencies
+       _______
+     _/       \_
+    / |       | \
+   /  |__   __|  \
+  |__/((o| |o))\__
+    \ | / _ \ | /
+     \_________/
+                   
+to save time we the CircleCI cache, here the Python venv is placed in a cache
+we use save_cache to save the docker image(not the venv mabye), we use restore_cache to load it
+
+restore_cache - searches  for a cache that matches the key template,
+    here it begins with deps1 and embeds the branche name {{ .Branch }}// like angular
+    checksum for requirements.txt {{ checksum "requirements/dev.txt" }}
+    circleCI restores the most recent cache
+        in this case: the branch cache location and the checksum given must matchs
+        
+run
+    creates the venv and installs deps
+save_cache
+    create a cache from spec paths key created by key, i
+    if a cache key matches another cache key circle ci does not save the intended cache,
+        for here that
+    
+    
+    steps:
+      - checkout
+      - restore_cache:
+          key: deps1-{{ .Branch }}-{{ checksum "requirements/dev.txt" }}
+      - run:
+          name: Install Python deps in a venv
+          command: |
+            python3 -m venv venv
+            . venv/bin/activate
+            pip install -r requirements/dev.txt
+      - save_cache:
+          key: deps1-{{ .Branch }}-{{ checksum "requirements/dev.txt" }}
+          paths:
+            - "venv"
+
+
+    .--.
+  .'_\/_'.
+  '. /\ .' to read more abt cache https://circleci.com/docs/2.0/caching/
+    "||"
+
+
+Installing and Running Selenium to Automate Browser Testing
+       _______
+     _/       \_
+    / |       | \
+   /  |__   __|  \
+  |__/((o| |o))\__
+    \ | / _ \ | /
+     \_________/
+                  
+so the app has the current chromedriver install because of the -browsers on the docker image
+circleci/python:3.6.2-stretch-browsers
+                  
+                  
+    steps:
+      - checkout
+      - run: mkdir test-reports
+      - run:
+          name: Download Selenium
+          command: |
+            curl -O http://selenium-release.storage.googleapis.com/3.5/selenium-server-standalone-3.5.3.jar
+      - run:
+          name: Start Selenium
+          command: |
+            java -jar selenium-server-standalone-3.5.3.jar -log test-reports/selenium.log
+          background: true
+          
+
+
+Running Tests
+
+       _______
+     _/       \_
+    / |       | \
+   /  |__   __|  \
+  |__/((o| |o))\__
+    \ | / _ \ | /
+     \_________/
+     
+so your venv is set, selenium is ready and test are run using unittest-xml-reporting
+reports will be stored in store_artifacts and store_test_results steps
+so let do that
+
+each command runs in a new shell
+store_artifacts:
+    the path is relative to project root
+    destination is a backup in case another process is placing artifacts in the same file name
+    When a job completes, artifacts appear in the CircleCI Artifacts tab
+    for test results it stores in the same place as store_artifacts buts its not required, you see this in the test summary tab
+    
+
+steps:
+      - run:
+          command: |
+            . venv/bin/activate
+            python manage.py test
+      - store_artifacts:
+          path: test-reports/
+          destination: tr1
+      - store_test_results:
+          path: test-reports/
+     
+click on links to see artifacts
+
+to learn more https://circleci.com/docs/2.0/artifacts ,https://circleci.com/docs/2.0/collect-test-data/
+
