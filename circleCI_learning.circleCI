@@ -1,0 +1,416 @@
+https://circleci.com/signup/
+
+this is how we should start
+
+NeuVector automate security
+
+
+table of contents
+
+
+Heading
+
+                                        .o.
+                                      o8888o
+                                     d888888b
+                                     `Y8888P'
+                                 o .oood88booo. .o
+                           Ybo  .88888888888888888.
+                           "8888888888888888888888888b,
+                          .o88888888888888888888888888"
+                        Y88888888888888888888888888888b.
+                       .o8888888888888888888888888888888.
+                       8888888888888888888888888888888888
+        o, ,db, ,o    d8888888888888888888888888888888888[
+       .8888888888.   88888888888888888888888888888888888[
+      o888888888888b ]88888888888888888888888888888888888
+     d88888888888888o88888888888888888888888888888888888P
+ .o8o88888888888888888888888888888888888888888888888888"
+<8888888888888888888888888888888888888888888888888888K
+  "Y"88888888888888888888888888888888888888888888888888o
+     Y88888888888888"88888888888888888888888888888888888b
+      "888888888888" ]88888888888888888888888888888888888
+       '8888888888`   88888888888888888888888888888888888[
+        "` "YP" `"    "8888888888888888888888888888888888[
+                        888888888888888888888888888888888
+                        "8888888888888888888888888888888'
+                        d88888888888888888888888888888P'
+                          `"88888888888888888888888888o
+                           ,8888888888888888888888888P'
+                           dP"  "88888888888888888
+                                 " `"""Y88P"""' "'
+                                     .d8888b.
+                                     Y888888P
+                                      "8888"
+                                        `"'
+
+sub section
+
+         ___---___
+      .--         --.
+    ./   ()      .-. \.
+   /   o    .   (   )  \
+  / .            '-'    \
+ | ()    .  O         .  |
+|                         |
+|    o           ()       |
+|       .--.          O   |
+ | .   |    |            |
+  \    `.__.'    o   .  /
+   \                   /
+    `\  o    ()      /'
+      `--___   ___--'
+            ---
+
+
+sub section
+
+
+     __|--|     |--|__
+    /  |  |-----|  |  \
+   /   \__|-----|__/   \
+  /   ______---______   \/\
+ /   /               \   \/
+{   /                 \   }
+|  {                   }  |-,
+|  |
+|  {                   }  |-'
+{   \                 /   }
+ \   `------___------'   /\
+  \     __|-----|__     /\/
+   \   /  |-----|  \   /
+    \  |--|     |--|  /
+     --|  |-----|  |--
+
+
+sub section
+
+       _______
+     _/       \_
+    / |       | \
+   /  |__   __|  \
+  |__/((o| |o))\__|
+  |      | |      |
+    \ | / _ \ | /
+     \_________/
+
+
+
+sub section
+
+
+    .-----,
+  .'\    / "/\
+ // /   /  /  \
+|_,'   /  /    |
+:     /  /     |
+ \   /  /     /
+  `./  /   _.'
+    `"'---"
+
+
+are tips
+ 
+    .--.
+  .'_\/_'.
+  '. /\ .'
+    "||"
+
+
+
+
+getting started
+
+
+                                        .o.
+                                      o8888o
+                                     d888888b
+                                     `Y8888P'
+                                 o .oood88booo. .o
+                           Ybo  .88888888888888888.
+                           "8888888888888888888888888b,
+                          .o88888888888888888888888888"
+                        Y88888888888888888888888888888b.
+                       .o8888888888888888888888888888888.
+                       8888888888888888888888888888888888
+        o, ,db, ,o    d8888888888888888888888888888888888[
+       .8888888888.   88888888888888888888888888888888888[
+      o888888888888b ]88888888888888888888888888888888888
+     d88888888888888o88888888888888888888888888888888888P
+ .o8o88888888888888888888888888888888888888888888888888"
+<8888888888888888888888888888888888888888888888888888K
+  "Y"88888888888888888888888888888888888888888888888888o
+     Y88888888888888"88888888888888888888888888888888888b
+      "888888888888" ]88888888888888888888888888888888888
+       '8888888888`   88888888888888888888888888888888888[
+        "` "YP" `"    "8888888888888888888888888888888888[
+                        888888888888888888888888888888888
+                        "8888888888888888888888888888888'
+                        d88888888888888888888888888888P'
+                          `"88888888888888888888888888o
+                           ,8888888888888888888888888P'
+                           dP"  "88888888888888888
+                                 " `"""Y88P"""' "'
+                                     .d8888b.
+                                     Y888888P
+                                      "8888"
+                                        `"'
+
+
+Spotify and circleCI
+
+https://circleci.com/gh/spotify/helios/5715#tests/containers/3
+
+         ___---___
+      .--         --.
+    ./   ()      .-. \.
+   /   o    .   (   )  \
+  / .            '-'    \
+ | ()    .  O         .  |
+|                         |
+|    o           ()       |
+|       .--.          O   |
+ | .   |    |            |
+  \    `.__.'    o   .  /
+   \                   /
+    `\  o    ()      /'
+      `--___   ___--'
+            ---
+
+
+Set up test runners to highlight failing tests. If your tests pass, it will show how fast your test ran.
+
+For repos you have write permissions to, you will be able to easily debug and rebuild via SSH.
+
+
+
+learning with circleCI
+         ___---___
+      .--         --.
+    ./   ()      .-. \.
+   /   o    .   (   )  \
+  / .            '-'    \
+ | ()    .  O         .  |
+|                         |
+|    o           ()       |
+|       .--.          O   |
+ | .   |    |            |
+  \    `.__.'    o   .  /
+   \                   /
+    `\  o    ()      /'
+      `--___   ___--'
+            ---
+
+lets make a sample repo
+
+so we have a repo for it
+
+
+Hello world
+https://circleci.com/docs/2.0/hello-world/
+         ___---___
+      .--         --.
+    ./   ()      .-. \.
+   /   o    .   (   )  \
+  / .            '-'    \
+ | ()    .  O         .  |
+|                         |
+|    o           ()       |
+|       .--.          O   |
+ | .   |    |            |
+  \    `.__.'    o   .  /
+   \                   /
+    `\  o    ()      /'
+      `--___   ___--'
+            ---
+
+creaete a .circleci directory in the local directory
+create a config.yml and add given code
+push to github and set up project
+start building for first build
+CircleCI runs each job in a separate container or VM. That is, each time your job runs, CircleCI spins up a container or VM to run the job
+
+ 
+    .--.
+  .'_\/_'.  if u get a no config found error its probably u did .yaml, plzz use .yml
+  '. /\ .'
+    "||"
+
+
+
+building the js application
+
+     __|--|     |--|__
+    /  |  |-----|  |  \
+   /   \__|-----|__/   \
+  /   ______---______   \/\
+ /   /               \   \/
+{   /                 \   }
+|  {                   }  |-,
+|  |
+|  {                   }  |-'
+{   \                 /   }
+ \   `------___------'   /\
+  \     __|-----|__     /\/
+   \   /  |-----|  \   /
+    \  |--|     |--|  /
+     --|  |-----|  |--
+
+
+Resources
+       _______
+     _/       \_
+    / |       | \
+   /  |__   __|  \
+  |__/((o| |o))\__|
+  |      | |      |
+    \ | / _ \ | /
+     \_________/
+
+
+you need to refer to
+
+https://github.com/CircleCI-Public/circleci-demo-javascript-express
+https://circleci.com/gh/CircleCI-Public/circleci-demo-javascript-express
+
+they say use their docker image( I wish i did things docker way oh well ) , and it uses mongo and react
+idk wht ill do abt react ill try
+
+
+build a project
+       _______
+     _/       \_
+    / |       | \
+   /  |__   __|  \
+  |__/((o| |o))\__|
+  |      | |      |
+    \ | / _ \ | /
+     \_________/
+
+
+fork the project from github
+Go to the Add Projects page in CircleCI and click the Build Project button next to the project you just forked
+follow steps
+To make changes you can edit the .circleci/config.yml file and make a commit. When you push a commit to GitHub, CircleCI will build and test the project.
+
+refer to the sample config.yml in demo
+
+
+Understanding the config file
+location ./demo/.circleci/config.yml
+
+     __|--|     |--|__
+    /  |  |-----|  |  \
+   /   \__|-----|__/   \
+  /   ______---______   \/\
+ /   /               \   \/
+{   /                 \   }
+|  {                   }  |-,
+|  |
+|  {                   }  |-'
+{   \                 /   }
+ \   `------___------'   /\
+  \     __|-----|__     /\/
+   \   /  |-----|  \   /
+    \  |--|     |--|  /
+     --|  |-----|  |--
+
+
+every config.yml file starts with the version key used to issue warnings about breaking changes
+
+
+--------
+version: 2
+--------
+
+
+    .-----,
+  .'\    / "/\
+ // /   /  /  \
+|_,'   /  /    |
+:     /  /     |
+ \   /  /     /
+  `./  /   _.'
+    `"'---"
+
+a run is made of one or more jobs if there are no workflows there must be build job
+use working_directory to specify where a jobs steps are run
+
+working_directory: ~/mern-starter
+
+The steps of a job occur in a virtual environment called an executor.
+
+
+ex
+jobs:
+  build:
+    working_directory: ~/mern-starter
+    docker:
+      - image: circleci/node:4.8.2
+      - image: mongo:3.4.4
+      
+all commands are executed in the first (primary) container
+
+
+    .-----,
+  .'\    / "/\
+ // /   /  /  \
+|_,'   /  /    |
+:     /  /     |
+ \   /  /     /
+  `./  /   _.'
+    `"'---""
+"
+create steps to run specific commands
+use  checkout: to check out source code, by default it checked out to the path specified by working_directory
+
+Use the save_cache step to cache certain files or directories. In this example, we cache node_modules using a checksum of the package.json as the cache-key.
+Use the restore_cache step to restore cached files or directories.
+
+
+Cache: example
+
+    steps:
+      - checkout
+      - run:
+          name: update-npm
+          command: 'sudo npm install -g npm@latest'
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: install-npm-wee
+          command: npm install
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - ./node_modules
+
+
+run the app
+    .-----,
+  .'\    / "/\
+ // /   /  /  \
+|_,'   /  /    |
+:     /  /     |
+ \   /  /     /
+  `./  /   _.'
+    `"'---""
+"
+ 
+ 
+      - run:
+          name: test
+          command: npm test
+      - run:
+          name: code-coverage
+          command: './node_modules/.bin/nyc report --reporter=text-lcov'
+      - store_artifacts:
+          path: test-results.xml
+          prefix: tests
+      - store_artifacts:
+          path: coverage
+          prefix: coverage
+      - store_test_results:
+          path: test-results.xml
+          
+since the dependencies are cached and installed we can run the test suite and upload results as an artifact, made availble on the .circleci web app
