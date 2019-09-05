@@ -1,2 +1,6 @@
 do I need to learn docker to better use circleCI
 how does circleCI and angular work together
+in python-flash why is my deploy job not runnign
+    https://circleci.com/gh/MichaelOdumosu57/circleci-demo-python-flask/12#config/containers/0 go  to configuration
+
+i had to make deploy one big job to get it to run

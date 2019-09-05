@@ -724,3 +724,69 @@ click on links to see artifacts
 
 to learn more https://circleci.com/docs/2.0/artifacts ,https://circleci.com/docs/2.0/collect-test-data/
 
+
+
+
+Deploying to Heroku
+
+       _______
+     _/       \_
+    / |       | \
+   /  |__   __|  \
+  |__/((o| |o))\__
+    \ | / _ \ | /
+     \_________/
+     
+you need a whole other job for this
+rename the heroku project so u dont interefere with theirs
+
+
+https://circleci.com/docs/2.0/deployment-integrations/#heroku
+
+    .-----,
+  .'\    / "/\
+ // /   /  /  \
+|_,'   /  /
+:     /  /
+ \   /  /     /
+  `./  /   _.'
+    `"'---"
+
+make a project in  heroku
+https://circleci.com/docs/2.0/deployment-integrations/#heroku
+Heroku application and your Heroku API key as environment variables
+https://help.heroku.com/PBGP6IDE/how-should-i-generate-an-api-key-that-allows-me-to-use-the-heroku-platform-api
+https://dashboard.heroku.com/account
+    expires when your password changes
+make a deploy job and add excecutor type
+
+https://circleci.com/docs/2.0/executor-types/
+    using docker
+    https://circleci.com/docs/2.0/circleci-images/ for docker images, best to use precise version or  redis:3.2.7 or redis@sha256:95f0c9434f37db0a4f
+    
+    
+    .--.
+  .'_\/_'.
+  '. /\ .' avoid using latest or 1 as the version image, if it takes long for build make a custom docker image
+    "||"   https://circleci.com/docs/2.0/custom-images/
+    
+    
+            
+  deploy:
+    docker:
+      - image: circleci/python:3.6.2-stretch-browsers
+    steps:
+      - checkout
+      - run:
+          name: Deploy Master to Heroku
+          command: |
+            git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git master
+          environment:
+            HEROKU_API_KEY:
+            HEROKU_APP_NAME:
+            
+success
+
+using heroku orbs
+
+
