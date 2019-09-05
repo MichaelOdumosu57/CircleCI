@@ -414,3 +414,166 @@ run the app
           path: test-results.xml
           
 since the dependencies are cached and installed we can run the test suite and upload results as an artifact, made availble on the .circleci web app
+
+
+version: 2
+jobs:
+  build:
+    working_directory: ~/mern-starter
+    docker:
+      - image: circleci/node:10.16.3
+      - image: angular/ngcontainer
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: angular
+          command: npm install  @angular/cli
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - ./node_modules
+      - run:
+          name: test
+          command: npm test
+      - store_artifacts:
+          path: test-results.xml
+          prefix: tests
+      - store_artifacts:
+          path: coverage
+          prefix: coverage
+      - store_test_results:
+          path: test-results.xml
+          
+so far angular running that test is going to be tough since its encapsulated in karma, we need to replace karma with circleCI, circleCI makes sure your app can build its not looking for test to run
+
+
+you quite cant use it with angular yet
+
+
+         ___---___
+      .--         --.
+    ./   ()      .-. \.
+   /   o    .   (   )  \
+  / .            '-'    \
+ | ()    .  O         .  |
+|                         |
+|    o           ()       |
+|       .--.          O   |
+ | .   |    |            |
+  \    `.__.'    o   .  /
+   \                   /
+    `\  o    ()      /'
+      `--___   ___--'
+            ---
+            
+
+CircleCI 2.0  project tutorial in depth
+
+repo:https://github.com/CircleCI-Public/circleci-demo-python-flask
+circleci:https://circleci-demo-python-flask.herokuapp.com/
+
+
+
+The following sections walk through how Jobs and Steps are configured for this application, how to run unit tests and integration tests with Selenium and Chrome in the CircleCI environment, and how to deploy the demo application to Heroku
+
+            
+            
+            
+            
+
+     __|--|     |--|__
+    /  |  |-----|  |  \
+   /   \__|-----|__/   \
+  /   ______---______   \/\
+ /   /               \   \/
+{   /                 \   }
+|  {                   }  |-,
+|  |   Basic Setup
+|  {                   }  |-'
+{   \                 /   }
+ \   `------___------'   /\
+  \     __|-----|__     /\/
+   \   /  |-----|  \   /
+    \  |--|     |--|  /
+     --|  |-----|  |--
+            
+
+so a config.yml file is made up of several Jobs, we have one job called build
+a job is comprised of several steps
+those steps execute in the first container u see for docker -> image
+
+
+
+
+    .-----,
+  .'\    / "/\
+ // /   /  /  \
+|_,'   /  /    |
+:     /  /     |
+ \   /  /     /
+  `./  /   _.'
+    `"'---"
+
+if your not using workflows u must
+
+executor: docker is one of them
+image: a docker image here is tht python one
+steps: u always start with checkout to gain access to your projects code, then run keys which automate build test and deploy
+
+
+
+ex
+
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/python:3.6.2-stretch-browsers
+    steps:
+      - checkout
+      - run: pip install -r requirements/dev.txt
+      
+      
+      
+Service Containers
+       _______
+     _/       \_
+    / |       | \
+   /  |__   __|  \
+  |__/((o| |o))\__
+    \ | / _ \ | /
+     \_________/
+       
+if the job needs additional software endpoints you can list more docker images in the docker stanza
+so  these  are stanzas, kids parents
+
+jobs:
+  build:
+    docker:
+      - image: circleci/python:3.6.2-stretch-browsers
+      - image: circleci/postgres:9.6.5-alpine-ram
+      
+usually docker images are config'd with env variables
+
+ex
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/python:3.6.2-stretch-browsers
+        environment:
+          FLASK_CONFIG: testing
+          TEST_DATABASE_URL: postgresql://root@localhost/circle_test?sslmode=disable
+      - image: circleci/postgres:9.6.5-alpine-ram
+        environment:
+          POSTGRES_USER: root
+          POSTGRES_DB: circle_test
+          POSTGRES_PASSWORD: ""
+          
+so  in flask you need to set an env var to help flask access the 2nd container
+the postgresql database is in localhost as you see
+the user is root,the db is circle_test and no password thts how it works
+
+
