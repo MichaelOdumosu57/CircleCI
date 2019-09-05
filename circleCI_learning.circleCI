@@ -787,6 +787,63 @@ https://circleci.com/docs/2.0/executor-types/
             
 success
 
-using heroku orbs
+   .-----,
+  .'\    / "/\
+ // /   /  /  \
+|_,'   /  /
+:     /  /
+ \   /  /     /
+  `./  /   _.'
+    `"'---"
+additional heroku configuration
+
+in this app its config.py and manage.py, with node its simple, with angular it should be ng serve and configurations are done in package.json
+
+for this other files heroku needs are
+Procfile: Tells Heroku how to run the demo app
+runtime.txt: Tells Heroku to use Python 3.6.0 instead of the default (2.7.13)
+requirements.txt: When this is present, Heroku will automatically install the Python dependencies
+
+lets manually build and push, thats if you can get heroku setup lol
+
+heroku create circleci-python-flask # change this to a unique name
+heroku addons:create heroku-postgresql:hobby-dev
+heroku config:set FLASK_CONFIG=heroku
+git push heroku master
+heroku run python manage.py deploy
+heroku restart
+
+
+    .-----,
+  .'\    / "/\
+ // /   /  /  \
+|_,'   /  /
+:     /  /
+ \   /  /     /
+  `./  /   _.'
+    `"'---"
+Using Workflows to Automatically Deploy
+
+so by defualt only build jobs on run, to get more jobs to activate use workflows
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
+
+https://circleci.com/docs/2.0/workflows
+
+
+    .--.
+  .'_\/_'.
+  '. /\ .'  so when you seperate jobs they actually place them in 2 different section on the app so avoid this
+    "||"
+
 
 
